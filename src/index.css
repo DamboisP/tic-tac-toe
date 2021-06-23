@@ -1,0 +1,109 @@
+body {
+    font: 24px "Century Gothic", Futura, sans-serif;
+    margin: 0;
+  }
+  
+#root {
+  background-color: rgb(247, 224, 250);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2em;
+}
+  
+  ol, ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .fa-drumstick-bite{
+    color: rgb(168, 118, 60);
+  }
+
+  .fa-bacon {
+    color: rgb(100%, 53%, 58.8%);
+  }
+
+  .game-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 5px;
+    margin:auto;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .square {
+    background: rgb(248, 180, 208);
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    float: left;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 68px;
+    height: 68px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 68px;
+    cursor: pointer;
+  }
+
+  .square>.fa-drumstick-bite{
+    animation: pop 0.3s linear 1;
+  }
+  .square>.fa-bacon{
+    animation: pop 0.3s linear 1;
+  }
+
+  
+  .game {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+  
+  
+  .jump-btn{
+    background-color: white;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    margin: 3px;
+    border-radius: 3px;
+    animation: pop 0.3s linear 1;
+  }
+
+  .jump-btn:hover{
+    background-color: rgb(247, 247, 247);
+  }
+
+  @keyframes pop{
+    50%  {transform: scale(1.2);}
+  }
